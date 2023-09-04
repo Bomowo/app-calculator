@@ -7,7 +7,15 @@ function App() {
 
   function handleCalculations (value) {
     console.log(value)
-    setResult(value)
+    if (value === 'RESET') {
+      setResult('')
+    } else
+    if (value === 'DEL') {
+      setResult('')
+    } else 
+    if (!isNaN(value)){
+      setResult(prevValue => prevValue + value)
+    }
   }
 
 
