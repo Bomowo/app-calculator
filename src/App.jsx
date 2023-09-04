@@ -1,11 +1,13 @@
+import {useState} from 'react'
 import CalcButton from "./component/CalcButton"
 
 function App() {
 
-
+  const [result, setResult] = useState('');
 
   function handleCalculations (value) {
     console.log(value)
+    setResult(value)
   }
 
 
@@ -17,7 +19,7 @@ function App() {
           <p className="col">THEME <span>switch with 3 cases</span></p>
         </div>
         <div className="row">
-          <input className="col" type="number" />
+          <input disabled className="col" type="string" value={result}/>
         </div>
       </div>
       <div className="container"> 
