@@ -1,6 +1,12 @@
-
+import CalcButton from "./component/CalcButton"
 
 function App() {
+
+
+
+  function handleCalculations (value) {
+    console.log(value)
+  }
 
 
   return (
@@ -16,32 +22,32 @@ function App() {
       </div>
       <div className="container"> 
         <div className="row">
-          <button className="col">7</button>
-          <button className="col">8</button>
-          <button className="col">9</button>
-          <button className="col">DEL</button>
+          <CalcButton value='7' calcClick={handleCalculations}/>
+          <CalcButton value='8' calcClick={handleCalculations}/>
+          <CalcButton value='9' calcClick={handleCalculations}/>
+          <CalcButton value='DEL' calcClick={handleCalculations}/>
         </div>
         <div className="row">
-          <button className="col">4</button>
-          <button className="col">5</button>
-          <button className="col">6</button>
-          <button className="col">+</button>
+        <CalcButton value='4' calcClick={handleCalculations}/>
+        <CalcButton value='5' calcClick={handleCalculations}/>
+        <CalcButton value='6' calcClick={handleCalculations}/>
+        <CalcButton value='+' calcClick={handleCalculations}/>
         </div>
         <div className="row">
-          <button className="col">1</button>
-          <button className="col">2</button>
-          <button className="col">3</button>
-          <button className="col">-</button>
+        <CalcButton value='1' calcClick={handleCalculations}/>
+        <CalcButton value='2' calcClick={handleCalculations}/>
+        <CalcButton value='3' calcClick={handleCalculations}/>
+        <CalcButton value='-' calcClick={handleCalculations}/>
         </div>
         <div className="row">
-          <button className="col">.</button>
-          <button className="col">0</button>
-          <button className="col">/</button>
-          <button className="col">x</button>
+        <CalcButton value='.' calcClick={handleCalculations}/>
+        <CalcButton value='0' calcClick={handleCalculations}/>
+        <CalcButton value='/' calcClick={handleCalculations}/>
+        <CalcButton value='x' calcClick={handleCalculations}/>
         </div>
         <div className="row">
-          <button className="col">RESET</button>
-          <button className="col">=</button>
+        <CalcButton value='RESET' calcClick={handleCalculations}/>
+        <CalcButton value='=' calcClick={handleCalculations}/>
         </div>
       </div>
     </div>
