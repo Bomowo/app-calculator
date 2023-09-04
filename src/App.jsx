@@ -11,8 +11,6 @@ function App() {
   });
 
   function handleCalculations (value) {
-    console.log(calculator)
-
     if (value === 'RESET') {
       setCalculator({
         displayValue: '0',
@@ -146,8 +144,6 @@ function App() {
         })
       } 
     }  
-
-
   }
 
   //'888888888888888888888888888888888888888888' max length of input
