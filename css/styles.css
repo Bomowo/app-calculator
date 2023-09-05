@@ -1,62 +1,64 @@
 body {
-    background-color: hsl(222, 26%, 31%);
-    color: hsl(0, 0%, 100%);
     padding-top: 100px;
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
 }
-.title{
+
+.title {
     display: flex;
     justify-content: space-between;
 }
-.title h1{
+
+.title h1 {
     width: 100px;
     margin: 0;
 }
-.theme-container{
-    display:flex;
+
+.theme-container {
+    display: flex;
 }
-.theme{
+
+.theme {
     margin-top: 10px;
     margin-right: 25px;
 }
-.theme-numbers{
+
+.theme-numbers {
     text-align: right;
     letter-spacing: 0.9rem;
     margin-right: 7px;
     margin-bottom: -1px;
 }
-.tgl-def{
+
+.tgl-def {
     -webkit-appearance: none;
     appearance: none;
-    background-color: hsl(222, 26%, 31%);
 }
-.tgl-def::-webkit-slider-thumb{
+
+.tgl-def::-webkit-slider-thumb {
     -webkit-appearance: none;
     margin-top: 4px;
     height: 17px;
     width: 17px;
     border-radius: 100%;
-    background: hsl(6, 63%, 50%);
 }
+
 .tgl-def::-webkit-slider-runnable-track {
-    background-color: hsl(224, 36%, 15%);
     width: 10px;
     height: 26px;
     border-radius: 15px;
     padding-left: 10px;
     padding-right: 10px;
-
 }
+
 .display {
     margin: 0 auto;
     width: 540px;
 }
+
 .number {
-    background-color: hsl(224, 36%, 15%);
     border: none;
     border-radius: 15px;
-    color: hsl(0, 0%, 100%);
     direction: rtl;
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
@@ -64,95 +66,252 @@ body {
     padding: 35px;
     height: 60px;
     width: 470px;
-
 }
+
 .numpad {
-    background-color: hsl(223, 31%, 20%);
     border-radius: 15px;
     margin: 0 auto;
-    margin-top:24px;
+    margin-top: 24px;
     padding: 32px;
     width: 476px;
     height: 416px;
 }
+
 .row {
     margin-bottom: 27px;
     display: flex;
     justify-content: space-evenly;
 }
-button {
 
-    background-color: hsl(30, 25%, 89%);
+button {
     border: none;
     border-radius: 15px;
-    color: hsl(221, 14%, 31%);
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     margin: 0 auto;
     width: 100px;
     height: 60px;
-
-    filter: drop-shadow(0 3px 0 hsl(28, 16%, 65%))
-
 }
+
 .row.last button {
     margin-top: 0;
     width: 219px;
 }
 
-.func-btn {
-    background-color: hsl(225, 21%, 49%);
+
+
+body.blue {
+    background-color: hsl(222, 26%, 31%);
     color: hsl(0, 0%, 100%);
-    filter: drop-shadow(0 3px 0 hsl(224, 28%, 35%))
 }
 
-.euqal-btn{
-    background-color: hsl(6, 63%, 50%);
-    color: hsl(0, 0%, 100%);
-    filter: drop-shadow(0 3px 0 hsl(6, 70%, 34%))
+body.white {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(60, 10%, 19%);
 }
 
-button:active {
-    background-color: hsl(0, 0%, 100%);
-}
-.func-btn:active{
-    background-color: #A2B3E1;
-
-}
-.euqal-btn:active{
-    background-color: #F96C5B;
+body.dark {
+    background-color: hsl(268, 75%, 9%);
+    color: hsl(52, 100%, 62%);
 }
 
-div.white{
-    background-color: white;
+
+.blue {
+    .tgl-def {
+        background-color: hsl(222, 26%, 31%);
+    }
+
+    .tgl-def::-webkit-slider-thumb {
+        background: hsl(6, 63%, 50%);
+    }
+
+    .tgl-def::-webkit-slider-runnable-track {
+        background-color: hsl(224, 36%, 15%);
+    }
+
+    .number {
+        background-color: hsl(224, 36%, 15%);
+        color: hsl(0, 0%, 100%);
+    }
+
+    .numpad {
+        background-color: hsl(223, 31%, 20%);
+    }
+
+    .func-btn {
+        background-color: hsl(225, 21%, 49%);
+        color: hsl(0, 0%, 100%);
+        filter: drop-shadow(0 3px 0 hsl(224, 28%, 35%))
+    }
+
+    .euqal-btn {
+        background-color: hsl(6, 63%, 50%);
+        color: hsl(0, 0%, 100%);
+        filter: drop-shadow(0 3px 0 hsl(6, 70%, 34%))
+    }
+
+    .func-btn:active {
+        background-color: #A2B3E1;
+
+    }
+
+    .euqal-btn:active {
+        background-color: #F96C5B;
+    }
+
+    .numbtn {
+        background-color: hsl(30, 25%, 89%);
+        color: hsl(221, 14%, 31%);
+        filter: drop-shadow(0 3px 0 hsl(28, 16%, 65%))
+    }
+
+    .numbtn:active {
+        background-color: hsl(0, 0%, 100%);
+    }
+
+}
+
+.white {
+    .tgl-def {
+        background-color: hsl(0, 0%, 90%);
+    }
+
+    .tgl-def::-webkit-slider-thumb {
+        background: hsl(25, 98%, 40%);
+    }
+
+    .tgl-def::-webkit-slider-runnable-track {
+        background-color: hsl(0, 5%, 81%);
+    }
+
+    .number {
+        background-color: hsl(0, 0%, 93%);
+        color: hsl(60, 10%, 19%);
+    }
+
+    .numpad {
+        background-color: hsl(0, 5%, 81%);
+    }
+
+    .func-btn {
+        background-color: hsl(185, 42%, 37%);
+        color: hsl(0, 0%, 93%);
+        filter: drop-shadow(0 3px 0 hsl(185, 58%, 25%))
+    }
+
+    .euqal-btn {
+        background-color: hsl(25, 98%, 40%);
+        color: hsl(0, 0%, 93%);
+        filter: drop-shadow(0 3px 0 hsl(25, 99%, 27%))
+    }
+
+    .func-btn:active {
+        background-color: #A2B3E1;
+
+    }
+
+    .euqal-btn:active {
+        background-color: #F96C5B;
+    }
+
+    .numbtn {
+        background-color: hsl(45, 7%, 89%);
+        color: hsl(60, 10%, 19%);
+        filter: drop-shadow(0 3px 0 hsl(35, 11%, 61%))
+    }
+
+    .numbtn:active {
+        background-color: hsl(0, 0%, 100%);
+    }
+
+}
+
+.dark {
+    .tgl-def {
+        background-color: hsl(268, 75%, 9%);
+    }
+
+    .tgl-def::-webkit-slider-thumb {
+        background: hsl(176, 100%, 44%);
+    }
+
+    .tgl-def::-webkit-slider-runnable-track {
+        background-color: hsl(268, 71%, 12%);
+    }
+
+    .number {
+        background-color: hsl(268, 71%, 12%);
+        color: hsl(52, 100%, 62%);
+    }
+
+    .numpad {
+        background-color: hsl(268, 71%, 12%);
+    }
+
+    .func-btn {
+        background-color: hsl(281, 89%, 26%);
+        color: hsl(0, 0%, 100%);
+        filter: drop-shadow(0 3px 0 hsl(285, 91%, 52%))
+    }
+
+    .euqal-btn {
+        background-color: hsl(176, 100%, 44%);
+        color: hsl(198, 20%, 13%);
+        filter: drop-shadow(0 3px 0 hsl(177, 92%, 70%))
+    }
+
+    .func-btn:active {
+        background-color: #8631B0;
+
+    }
+
+    .euqal-btn:active {
+        background-color: #94FFF9;
+    }
+
+    .numbtn {
+        background-color: hsl(268, 47%, 21%);
+        color: hsl(52, 100%, 62%);
+        filter: drop-shadow(0 3px 0 hsl(290, 70%, 36%))
+    }
+
+    .numbtn:active {
+        background-color: #6B34AC;
+    }
+
 }
 
 @media (max-width:750px) {
-    .display{
+    .display {
         width: 327px;
     }
+
     .number {
         padding: 26px;
         height: 36px;
         width: 275px;
     }
-    .numpad{
+
+    .numpad {
         margin: 0 auto;
-        margin-top:24px;
+        margin-top: 24px;
         padding: 24px;
         width: 279px;
         height: 372px;
     }
-    .row{
+
+    .row {
         margin-bottom: 17px;
     }
-    button{
+
+    button {
         border-radius: 13px;
         width: 60px;
         height: 60px;
         font-size: 1.75rem;
     }
+
     .row.last button {
         width: 130px;
     }

@@ -15,7 +15,7 @@ function App() {
     class: 'blue'
   })
 
-  useEffect (()=>{
+  useEffect (()=>{ 
     document.body.className = ''
 
     document.body.classList.add(theme.class);
@@ -197,28 +197,28 @@ function App() {
       </div>
       <div className="container numpad"> 
         <div className="row">
-          <CalcButton value='7' calcClick={handleCalculations}/>
-          <CalcButton value='8' calcClick={handleCalculations}/>
-          <CalcButton value='9' calcClick={handleCalculations}/>
+          <CalcButton cssClass="numbtn" value='7' calcClick={handleCalculations}/>
+          <CalcButton cssClass="numbtn" value='8' calcClick={handleCalculations}/>
+          <CalcButton cssClass="numbtn" value='9' calcClick={handleCalculations}/>
           <CalcButton cssClass='func-btn' value='DEL' calcClick={handleCalculations}/>
         </div>
         <div className="row">
-        <CalcButton value='4' calcClick={handleCalculations}/>
-        <CalcButton value='5' calcClick={handleCalculations}/>
-        <CalcButton value='6' calcClick={handleCalculations}/>
-        <CalcButton value='+' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='4' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='5' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='6' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='+' calcClick={handleCalculations}/>
         </div>
         <div className="row">
-        <CalcButton value='1' calcClick={handleCalculations}/>
-        <CalcButton value='2' calcClick={handleCalculations}/>
-        <CalcButton value='3' calcClick={handleCalculations}/>
-        <CalcButton value='-' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='1' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='2' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='3' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='-' calcClick={handleCalculations}/>
         </div>
         <div className="row">
-        <CalcButton value='.' calcClick={handleCalculations}/>
-        <CalcButton value='0' calcClick={handleCalculations}/>
-        <CalcButton value='/' calcClick={handleCalculations}/>
-        <CalcButton value='x' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='.' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='0' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='/' calcClick={handleCalculations}/>
+        <CalcButton cssClass="numbtn" value='x' calcClick={handleCalculations}/>
         </div>
         <div className="row last">
         <CalcButton cssClass='func-btn' value='RESET' calcClick={handleCalculations}/>
