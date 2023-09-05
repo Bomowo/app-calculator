@@ -94,3 +94,32 @@ button:active {
 }
 
 
+@media (max-width:750px) {
+    .display{
+        width: 327px;
+    }
+    input {
+        padding: 26px;
+        height: 36px;
+        width: 275px;
+    }
+    .numpad{
+        margin: 0 auto;
+        margin-top:24px;
+        padding: 24px;
+        width: 279px;
+        height: 372px;
+    }
+    .row{
+        margin-bottom: 17px;
+    }
+    button{
+        border-radius: 13px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+    .row.last button {
+        width: 130px;
+    }
+}
