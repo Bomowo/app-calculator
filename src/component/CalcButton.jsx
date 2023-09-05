@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 
-export default function CalcButton ({value, calcClick}) {
+export default function CalcButton ({value, calcClick, cssClass}) {
 
-    return (<button className="col" onClick={() => calcClick(value)}>{value}</button>)
+    return (<button className={cssClass} onClick={() => calcClick(value)}>{value}</button>)
 
 }
 
 CalcButton.propTypes = {
     value: PropTypes.string.isRequired,
-    calcClick: PropTypes.func.isRequired
+    calcClick: PropTypes.func.isRequired,
+    cssClass: PropTypes.string.isRequired
 }

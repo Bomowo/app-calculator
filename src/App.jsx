@@ -163,7 +163,7 @@ function App() {
           <CalcButton value='7' calcClick={handleCalculations}/>
           <CalcButton value='8' calcClick={handleCalculations}/>
           <CalcButton value='9' calcClick={handleCalculations}/>
-          <CalcButton value='DEL' calcClick={handleCalculations}/>
+          <CalcButton cssClass='func-btn' value='DEL' calcClick={handleCalculations}/>
         </div>
         <div className="row">
         <CalcButton value='4' calcClick={handleCalculations}/>
@@ -184,8 +184,8 @@ function App() {
         <CalcButton value='x' calcClick={handleCalculations}/>
         </div>
         <div className="row last">
-        <CalcButton value='RESET' calcClick={handleCalculations}/>
-        <CalcButton value='=' calcClick={handleCalculations}/>
+        <CalcButton cssClass='func-btn' value='RESET' calcClick={handleCalculations}/>
+        <CalcButton cssClass='euqal-btn'value='=' calcClick={handleCalculations}/>
         </div>
       </div>
     </div>

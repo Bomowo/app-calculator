@@ -1,6 +1,7 @@
 body {
     background-color: hsl(222, 26%, 31%);
     color: hsl(0, 0%, 100%);
+    padding-top: 100px;
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
 }
@@ -36,6 +37,7 @@ input {
 }
 .numpad {
     background-color: hsl(223, 31%, 20%);
+    border-radius: 15px;
     margin: 0 auto;
     margin-top:24px;
     padding: 32px;
@@ -48,16 +50,47 @@ input {
     justify-content: space-evenly;
 }
 button {
-    color: hsl(221, 14%, 31%);
+
     background-color: hsl(30, 25%, 89%);
+    border: none;
+    border-radius: 15px;
+    color: hsl(221, 14%, 31%);
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
+    font-size: 2rem;
     margin: 0 auto;
     width: 100px;
     height: 60px;
+
+    filter: drop-shadow(0 3px 0 hsl(28, 16%, 65%))
 
 }
 .row.last button {
     margin-top: 0;
     width: 219px;
 }
+
+.func-btn {
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(0, 0%, 100%);
+    filter: drop-shadow(0 3px 0 hsl(224, 28%, 35%))
+}
+
+.euqal-btn{
+    background-color: hsl(6, 63%, 50%);
+    color: hsl(0, 0%, 100%);
+    filter: drop-shadow(0 3px 0 hsl(6, 70%, 34%))
+}
+
+button:active {
+    background-color: hsl(0, 0%, 100%);
+}
+.func-btn:active{
+    background-color: #A2B3E1;
+
+}
+.euqal-btn:active{
+    background-color: #F96C5B;
+}
+
+
