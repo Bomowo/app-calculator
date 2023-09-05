@@ -7,21 +7,52 @@ body {
 }
 .title{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .title h1{
     width: 100px;
     margin: 0;
 }
-.title p{
-    width: 100px;
-    margin: 0;
+.theme-container{
+    display:flex;
+}
+.theme{
+    margin-top: 10px;
+    margin-right: 25px;
+}
+.theme-numbers{
+    text-align: right;
+    letter-spacing: 0.9rem;
+    margin-right: 7px;
+    margin-bottom: -1px;
+}
+.tgl-def{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: hsl(222, 26%, 31%);
+}
+.tgl-def::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    margin-top: 4px;
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    background: hsl(6, 63%, 50%);
+}
+.tgl-def::-webkit-slider-runnable-track {
+    background-color: hsl(224, 36%, 15%);
+    width: 10px;
+    height: 26px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 .display {
     margin: 0 auto;
     width: 540px;
 }
-input {
+.number {
     background-color: hsl(224, 36%, 15%);
     border: none;
     border-radius: 15px;
@@ -93,12 +124,15 @@ button:active {
     background-color: #F96C5B;
 }
 
+div.white{
+    background-color: white;
+}
 
 @media (max-width:750px) {
     .display{
         width: 327px;
     }
-    input {
+    .number {
         padding: 26px;
         height: 36px;
         width: 275px;

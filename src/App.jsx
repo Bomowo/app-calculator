@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import CalcButton from "./component/CalcButton"
 
 function App() {
@@ -9,6 +9,17 @@ function App() {
     operator: '',
     calculating: false
   });
+
+  const [theme, setTheme] = useState({
+    value: 1,
+    class: 'blue'
+  })
+
+  useEffect (()=>{
+    document.body.className = ''
+
+    document.body.classList.add(theme.class);
+  }, [theme])
 
   function handleCalculations (value) {
     if (value === 'RESET') {
@@ -148,15 +159,41 @@ function App() {
 
   //'888888888888888888888888888888888888888888' max length of input
 
+  function handleThemeSlider (event) {
+    setTheme(prevTheme => {
+
+      let setClass = ''
+      if(event.target.value === '1'){
+        setClass = 'blue'
+      } else
+      if(event.target.value === '2') {
+        setClass = 'white'
+      } else
+      if(event.target.value === '3'){
+        setClass = 'dark'
+      }
+      
+      return {
+      ...prevTheme,
+      value: event.target.value,
+      class: setClass
+    }})
+  }
+
   return (
     <div>
       <div className="container display">
+      <p className='theme-numbers'>1 2 3</p>
         <div className="title">
           <h1>calc</h1>
-          <p>THEME </p>
-          <p>switch with 3 cases</p>
+          <div className='theme-container'>
+            <p className="theme">THEME</p>
+            <div className="switch-toggle">
+            <input type="range" onChange={handleThemeSlider} min="1" step="1" max="3" value={theme.value} id="custom-toggle" className="tgl-def"/>
+            </div>
+          </div>
         </div>
-          <input disabled className="col" type="string" value={calculator.displayValue}/>
+          <input disabled className="number" type="string" value={calculator.displayValue}/>
       </div>
       <div className="container numpad"> 
         <div className="row">
