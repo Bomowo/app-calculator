@@ -150,16 +150,15 @@ function App() {
 
   return (
     <div>
-      <div className="container">
-        <div className="row">
-          <h1 className="col">calc</h1>
-          <p className="col">THEME <span>switch with 3 cases</span></p>
+      <div className="container display">
+        <div className="title">
+          <h1>calc</h1>
+          <p>THEME </p>
+          <p>switch with 3 cases</p>
         </div>
-        <div className="row">
           <input disabled className="col" type="string" value={calculator.displayValue}/>
-        </div>
       </div>
-      <div className="container"> 
+      <div className="container numpad"> 
         <div className="row">
           <CalcButton value='7' calcClick={handleCalculations}/>
           <CalcButton value='8' calcClick={handleCalculations}/>
@@ -184,7 +183,7 @@ function App() {
         <CalcButton value='/' calcClick={handleCalculations}/>
         <CalcButton value='x' calcClick={handleCalculations}/>
         </div>
-        <div className="row">
+        <div className="row last">
         <CalcButton value='RESET' calcClick={handleCalculations}/>
         <CalcButton value='=' calcClick={handleCalculations}/>
         </div>
