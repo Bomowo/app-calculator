@@ -89,7 +89,7 @@ function App() {
             calculating: false
           }})
         } else
-        if(calculator.operator === '/' && calculator.displayValue !== '0') {
+        if(calculator.operator === '/' && Number(calculator.displayValue) !== 0) {
           setCalculator(prevState => {
             return { ...prevState,
             displayValue: String(Number(prevState.storedValue) / Number(prevState.displayValue)),
@@ -127,7 +127,7 @@ function App() {
             calculating: false
           }})
         } else
-        if(calculator.operator === '/' && calculator.displayValue !== '0') {
+        if(calculator.operator === '/' && Number(calculator.displayValue) !== 0) {
           setCalculator(prevState => {
             return { ...prevState,
             displayValue: String(Number(prevState.storedValue) / Number(prevState.displayValue)),
