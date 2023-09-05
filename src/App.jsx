@@ -15,6 +15,29 @@ function App() {
     class: 'blue'
   })
 
+  useEffect(()=>{
+    if (window.matchMedia) {
+      // Check if the dark-mode Media-Query matches
+      if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+        setTheme({
+          value: 3,
+          class: 'dark'
+        })
+      } else {
+        setTheme({
+          value: 2,
+          class: 'white'
+        })
+      }
+    } else {
+      // Default (when Media-Queries are not supported)
+      setTheme({
+        value: 1,
+        calss: 'blue'
+      })
+    }
+  },[])
+
   useEffect (()=>{ 
     document.body.className = ''
 
