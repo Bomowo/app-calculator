@@ -9,5 +9,5 @@ export default function CalcButton ({value, calcClick, cssClass}) {
 CalcButton.propTypes = {
     value: PropTypes.string.isRequired,
     calcClick: PropTypes.func.isRequired,
-    cssClass: PropTypes.string.isRequired
+    cssClass: PropTypes.string
 }
