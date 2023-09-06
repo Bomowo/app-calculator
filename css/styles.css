@@ -60,6 +60,7 @@ body {
     border: none;
     border-radius: 15px;
     text-align: right;
+    text-overflow: ellipsis;
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
     font-size: 32px;
