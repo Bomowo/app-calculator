@@ -59,7 +59,7 @@ body {
 .number {
     border: none;
     border-radius: 15px;
-    direction: rtl;
+    text-align: right;
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
     font-size: 32px;
