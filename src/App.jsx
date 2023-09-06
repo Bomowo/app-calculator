@@ -45,6 +45,7 @@ function App() {
   }, [theme])
 
   function handleCalculations (value) {
+    console.log(calculator)
     if (value === 'RESET') {
       setCalculator({
         displayValue: '0',
@@ -53,10 +54,10 @@ function App() {
         calculating: false
       })
     } else
-    if (value === '.' && !calculator.displayValue.includes('.')) {
+    if (value === '.' && !calculator.displayValue.includes(',')) {
       setCalculator(prevState => {
         return {...prevState,
-          displayValue: prevState.displayValue + value}
+          displayValue: prevState.displayValue + ','}
       })
     } else
     if (value === 'DEL') {
@@ -99,7 +100,7 @@ function App() {
         if(calculator.operator === '+') {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) + Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',', '.')) + Number(prevState.displayValue.replace(',', '.'))).replace('.', ','),
             storedValue: 0,
             operator: '',
             calculating: false
@@ -108,7 +109,7 @@ function App() {
         if(calculator.operator === '-') {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) - Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',','.')) - Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
             storedValue: 0,
             operator: '',
             calculating: false
@@ -117,7 +118,7 @@ function App() {
         if(calculator.operator === 'x') {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) * Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',','.')) * Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
             storedValue: 0,
             operator: '',
             calculating: false
@@ -126,7 +127,7 @@ function App() {
         if(calculator.operator === '/' && Number(calculator.displayValue) !== 0) {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) / Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',','.')) / Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
             storedValue: 0,
             operator: '',
             calculating: false
@@ -137,8 +138,8 @@ function App() {
         if(calculator.operator === '+') {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) + Number(prevState.displayValue)),
-            storedValue: String(Number(prevState.storedValue) + Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',','.')) + Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
+            storedValue: String(Number(prevState.storedValue.replace(',','.')) + Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
             operator: value,
             calculating: false
           }})
@@ -146,8 +147,8 @@ function App() {
         if(calculator.operator === '-') {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) - Number(prevState.displayValue)),
-            storedValue: String(Number(prevState.storedValue) - Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',','.')) - Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
+            storedValue: String(Number(prevState.storedValue.replace(',','.')) - Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
             operator: value,
             calculating: false
           }})
@@ -155,8 +156,8 @@ function App() {
         if(calculator.operator === 'x') {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) * Number(prevState.displayValue)),
-            storedValue: String(Number(prevState.storedValue) * Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',','.')) * Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
+            storedValue: String(Number(prevState.storedValue.replace(',','.')) * Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
             operator: value,
             calculating: false
           }})
@@ -164,8 +165,8 @@ function App() {
         if(calculator.operator === '/' && Number(calculator.displayValue) !== 0) {
           setCalculator(prevState => {
             return { ...prevState,
-            displayValue: String(Number(prevState.storedValue) / Number(prevState.displayValue)),
-            storedValue: String(Number(prevState.storedValue) / Number(prevState.displayValue)),
+            displayValue: String(Number(prevState.storedValue.replace(',','.')) / Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
+            storedValue: String(Number(prevState.storedValue.replace(',','.')) / Number(prevState.displayValue.replace(',','.'))).replace('.', ','),
             operator: value,
             calculating: false
           }})
